@@ -1,0 +1,21 @@
+/* src/components/SubcategoryBar/SubcategoryBar.css */
+.subcategory-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.subcategory-button {
+  padding: 8px 16px;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subcategory-button:hover {
+  background-color: #17a2b8;
+  color: #fff;
+}

@@ -1,0 +1,21 @@
+.categoryButtonsContainer {  
+  display: flex;  
+  justify-content: space-between; /* Space between category buttons and the add button */  
+  align-items: center; /* Center vertically */  
+  margin-bottom: 20px; /* Space below the buttons */  
+}  
+
+/* Individual Category Button */  
+.categoryButton {  
+  padding: 10px 15px;  
+  margin: 0 5px; /* Adjust margin as necessary */  
+  border: none;  
+  border-radius: 5px;  
+  background-color: #e7e7e7;  
+  cursor: pointer;  
+}  
+
+.categoryButton:hover {  
+  background-color: #d0d0d0;  
+}  
+

@@ -1,0 +1,56 @@
+/* src/components/AddProductModal/AddProductModal.css */
+.add-product-modal {
+  width: 860px;
+  height: 505px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-type-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-type-selection button {
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.image-upload {
+  margin-bottom: 20px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-details label {
+  margin-bottom: 5px;
+}
+
+.product-details input {
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.add-product-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-product-button:hover {
+  background-color: #45a049;
+}

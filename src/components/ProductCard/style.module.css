@@ -1,0 +1,29 @@
+/* Product Card */
+.productCard {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.productImage {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productCode {
+  color: #888;
+}
+
+.productPrice {
+  font-weight: bold;
+}
+  
