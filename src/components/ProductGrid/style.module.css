@@ -1,12 +1,50 @@
 .product-grid {  
   display: grid;  
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
-  gap: 20px;  
+  gap: 40px;  
   width: 100%;  
   max-width: 900px;  
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  margin: 25px;
+  transition: transform 0.3s ease;
+}
+
+.product-grid:hover{
+  transform: scale(1.05);
+
+} 
+
+
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .product-image {  
-  width: 10%; /* or a specific width */  
-  height: auto; /* maintain aspect ratio */  
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  height: 150px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Make sure images maintain aspect ratio */
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
 }  
+
+
+.product-name{
+  color: #888;
+  font-size: 14px;
+}
+
+
+.product-price{
+  font-weight: bold;
+  font-size: 16px;
+}

@@ -1,0 +1,22 @@
+/* Gender Toggle */  
+.gender-toggle {  
+  display: flex;  
+  flex-direction: column;  
+  margin-bottom: 20px;  
+}  
+
+.gender-toggle button {  
+
+  margin: 10px;
+  /* padding: 10px;
+  margin: 0 10px;   */
+  border: none;  
+  border-radius: 5px;  
+  background-color: #007bff;  
+  color: white;  
+  cursor: pointer;  
+}  
+
+.gender-toggle button:hover {  
+  background-color: #0056b3;  
+}  

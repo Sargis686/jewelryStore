@@ -1,21 +1,79 @@
-/* src/components/SubcategoryBar/SubcategoryBar.css */
-.subcategory-bar {
+/* Modal Container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  z-index: 1000;
 }
 
-.subcategory-button {
-  padding: 8px 16px;
-  background-color: #e9ecef;
-  border: none;
+/* Modal Content */
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; /* Adjust width based on layout */
+  max-width: 90%; /* Ensure it's responsive */
+  height: auto;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 259px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.subcategory-button:hover {
-  background-color: #17a2b8;
-  color: #fff;
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }

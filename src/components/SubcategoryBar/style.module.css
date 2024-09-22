@@ -1,21 +1,47 @@
-/* src/components/SubcategoryBar/SubcategoryBar.css */
-.subcategory-bar {
+/* Subcategory Bar */
+.subcategoryBar {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px; /* Space between subcategories */
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0; /* Separator line under subcategories */
 }
 
-.subcategory-button {
-  padding: 8px 16px;
-  background-color: #e9ecef;
+.subcategoryItem {
+  font-size: 16px;
+  color: #4F4F4F; /* Link-like color */
+  cursor: pointer;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.subcategoryItem:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #007bff; /* Underline on hover */
+}
+
+.subcategoryItem:active {
+  color: #003d82;
+  border-bottom: 2px solid #003d82;
+}
+
+/* Button for adding a new subcategory */
+.addSubcategoryButton {
+  background: #FFFFFF;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  color: #1F1617;
   border: none;
+  padding: 5px 10px;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.subcategory-button:hover {
-  background-color: #17a2b8;
-  color: #fff;
+.addSubcategoryButton:hover {
+  background-color: #218838;
 }

@@ -5,6 +5,20 @@
   background-color: #f8f8f8;  
 }  
 
+
+
+.category{
+  display: flex;
+  justify-content: center;
+}
+
+.SubcategorywithProducts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 /* Search Bar */  
 .searchBar {  
   display: flex;  
@@ -21,26 +35,8 @@
   border-radius: 5px;  
 }  
 
-/* Gender Toggle */  
-.gender-toggle {  
-  display: flex;  
-  justify-content: center;  
-  margin-bottom: 20px;  
-}  
 
-.gender-toggle button {  
-  padding: 10px 20px;  
-  margin: 0 10px;  
-  border: none;  
-  border-radius: 5px;  
-  background-color: #007bff;  
-  color: white;  
-  cursor: pointer;  
-}  
 
-.gender-toggle button:hover {  
-  background-color: #0056b3;  
-}  
 
 /* Navigation Bar */  
 .navigationBar {  

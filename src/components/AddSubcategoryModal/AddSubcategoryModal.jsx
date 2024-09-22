@@ -17,20 +17,20 @@ const AddSubcategoryModal = ({ isOpen, onRequestClose, addSubcategory }) => {
 
   return (
     <div className={s.modal}>
-      <div className={s["modal-content"]}>
-        <span className={s["close-button"]} onClick={onRequestClose}>
+      <div className={s.modalContent}>
+        <span className={s.closeButton} onClick={onRequestClose}>
           &times;
         </span>
-        <h2>Add Subcategory</h2>
+        <h2>Кольцо: Добавить Подкатегорию</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             value={subcategoryName}
             onChange={(e) => setSubcategoryName(e.target.value)}
-            placeholder="Enter subcategory name"
+            placeholder="Подкатегория"
             required
           />
-          <button type="submit">Add Subcategory</button>
+          <button type="submit">Добавить</button>
         </form>
       </div>
     </div>
