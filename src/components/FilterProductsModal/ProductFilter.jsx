@@ -1,6 +1,5 @@
 // ProductFilter.js  
 import React, { useState } from 'react';  
-import FilterProductsModal from './FilterProductsModal'; // Adjust the path if necessary  
 
 const ProductFilter = ({ products, selectedSubcategory, setFilteredProducts }) => {  
   const [isFilterModalOpen, setFilterModalOpen] = useState(false);  

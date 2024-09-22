@@ -1,4 +1,3 @@
-import { useState } from "react";
 import s from "./style.module.css"; // Make sure to update this path accordingly
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {

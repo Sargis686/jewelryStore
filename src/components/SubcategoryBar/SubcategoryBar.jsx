@@ -1,29 +1,22 @@
-// src/components/SubcategoryBar/SubcategoryBar.js
 import React from 'react';
-import  s  from './style.module.css';
+import s from './style.module.css';
 
 const SubcategoryBar = ({ selectedCategory, onSubcategoryClick, onAddSubcategory }) => {
   return (
-    <div className={s["subcategory-bar"]}>
-     {selectedCategory.subcategories.map((subcategory) => (
-        <button
+    <div className={s.subcategoryBar}>
+      {selectedCategory.subcategories.map((subcategory) => (
+        <span
           key={subcategory.id}
+          className={s.subcategoryItem}
           onClick={() => onSubcategoryClick(subcategory)}
         >
           {subcategory.name}
-        </button>
+        </span>
       ))}
-       
 
-<button  onClick={onAddSubcategory} className={s["add-subcategory-button"]}>
-+ 
-
-</button>
-
-
-
-
-      
+      <button onClick={onAddSubcategory} className={s.addSubcategoryButton}>
+        + 
+      </button>
     </div>
   );
 };

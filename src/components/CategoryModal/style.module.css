@@ -1,5 +1,4 @@
-/* src/components/Modals/Modal.css */
-
+/* src/components/Modals/style.module.css */
 .modal {
   position: fixed;
   z-index: 1000;
@@ -13,10 +12,10 @@
   align-items: center;
 }
 
-.modal-content {
+.modalContent {
   background-color: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 400px;
   max-width: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -34,13 +33,13 @@
 }
 
 .close:hover {
-  color: #ff0000;
+  color: red;
 }
 
 h2 {
   margin-top: 0;
-  margin-bottom: 20px;
   font-size: 22px;
+  color: #333;
 }
 
 form {
@@ -48,8 +47,7 @@ form {
   flex-direction: column;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type="text"] {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -72,10 +70,6 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-button {
-  cursor: pointer;
-}
-
 .imageUpload {
   display: flex;
   flex-direction: column;
@@ -85,7 +79,6 @@ button {
 
 .imageLabel {
   cursor: pointer;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,6 +87,7 @@ button {
   border: 1px dashed #ccc;
   border-radius: 8px;
   width: 100%;
+  text-align: center;
 }
 
 .imageIcon {
@@ -106,4 +100,33 @@ button {
   max-width: 200px;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+.genderSelection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.genderButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.addButton {
+  background-color: #0008c1;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addButton:hover {
+  background-color: #0056b3;
 }

@@ -2,26 +2,19 @@
 import React from 'react';
 import s from './style.module.css'
 
-const CategoryButtons = ({ setCategoryModalOpen, setProductModalOpen, selectedSubcategory }) => {
+const CategoryButtons = ({ setProductModalOpen, selectedSubcategory }) => {
     return (
         <>
 
-            <div className={s.categoryButtonsContainer}>
-                <div className={s.categoryButtons}>
-
-                    <button className="add-category-button" onClick={() => setCategoryModalOpen(true)}>
-                        + Add Category
-                    </button>
-                </div>
-
-            </div>
-
-
+  
 
             {selectedSubcategory && (
-                <button className="add-product-button" onClick={() => setProductModalOpen(true)}>
-                    + Add Product
+
+                <div className={s.addContainer}>
+                <button className={s["add-product-button"]} onClick={() => setProductModalOpen(true)}>
+                    + 
                 </button>
+                </div>
             )}
         </>
     );

@@ -1,33 +1,56 @@
-import React from 'react';  
-import s from './style.module.css';  
+// NavigationBar.js
+import React from 'react';
+import s from './style.module.css';
+import ToggleGender from '../ToggleGender/ToggleGender';
 
-// Category navigation bar component  
-const NavigationBar = ({ categories, onCategoryClick }) => {  
-  return (  
-    <div className={s.navigationBar}>  
-      {categories.map((category) => (  
-        <div key={category.id} className={s["category-container"]}>  
-          <button  
-            className={s["category-button"]}  
-            onClick={() => onCategoryClick(category)}  
-          >  
-            <span className={s["category-name"]}>{category.name}</span>  
+const NavigationBar = ({
+  categories,
+  onCategoryClick,
+  setCategoryModalOpen,
+  setSelectedGender,
+  handleCategoryClick,
+  handleSubcategoryClick
+}) => {
+  return (
+    <div className={s.navigationBar}>
+      {/* Toggle Gender Component */}
+      <div className={s.toggleGenderContainer}>
+        <ToggleGender
+          toggleGender={setSelectedGender}
+          setSelectedCategory={handleCategoryClick}
+          setSelectedSubcategory={handleSubcategoryClick}
+        />
+      </div>
 
-            {/* Conditional image rendering based on category name */}  
+      {/* Categories Mapping */}
+      {categories.map((category) => (
+        <div key={category.id} className={s.categoryContainer}>
+          <button
+            className={s.categoryButton}
+            onClick={() => onCategoryClick(category)}
+          >
+            <span className={s.categoryName}>{category.name}</span>
             <img  
-              src={  
-                category.name === 'Кольца' ? '/assets/ring.png' :  
-                category.name === 'Колье' ? '/assets/necklace.png' :  
-                '/assets/default.png' // Fallback image  
-              }  
-              alt={category.name}  
-              className={s["category-image"]}  
-            />  
-          </button>  
-        </div>  
-      ))}  
-    </div>  
-  );  
-};  
+              src={
+                category.name === 'Кольца' ? '/assets/ring.png' :
+                category.name === 'Колье' ? '/assets/necklace.png' :
+                '/assets/default.png' // Fallback image
+              }
+              alt={category.name}
+              className={s.categoryImage}
+            />
+          </button>
+        </div>
+      ))}
+
+      {/* Add Category Button */}
+      <div className={s.categoryButtonsContainer}>
+        <button className={s.addCategory} onClick={() => setCategoryModalOpen(true)}>
+          +
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default NavigationBar;

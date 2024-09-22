@@ -9,19 +9,24 @@ const ProductGrid = ({ products }) => {
 
       
       {products.map((product) => (
-        <div key={product.id} className={s["product-item"]}>
+        <div key={product.id} className={s["product-grid"]}>
           {/* Display the uploaded image */}
           <img src={product.image} alt={product.name} className={s["product-image"]} />
           
-          {/* Display the correct product name */}
-          <h3 className={s["product-name"]}>{product.name}</h3>
+          <div className={s.productInfo}>
+          <span  className={s["product-name"]}>{product.name}</span >
           
-          <p className={s["product-price"]}>{product.price} руб.</p>
+          <span  className={s["product-price"]}>{product.price} руб.</span >
+        </div>
         </div>
       ))}
     </div>
   );
+
 };
+
+
+
 
 export default ProductGrid;
 
